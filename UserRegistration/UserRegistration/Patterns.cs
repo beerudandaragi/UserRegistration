@@ -10,20 +10,19 @@ namespace UserRegistration
     class Patterns
     {
 
-
         public static void Password(string name)
         {
-            string Password = "^[A-Z][A-Za-z0-9]{7,}";
+            string Password = "^((?=.*[A-Z])(?=.*[0-9])(?=.{8,}))";
             Regex regex = new Regex(Password);
             if (regex.IsMatch(name))
             {
-                Console.WriteLine(name + " is valid possword");
+                Console.WriteLine(name + " is possword");
             }
             else
             {
-                Console.WriteLine(name + " is invalid possword");
+                Console.WriteLine(name + " is invalid.");
             }
-            Console.ReadKey();
+            Console.ReadKey() ;
         }
     }
 }
