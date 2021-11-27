@@ -9,18 +9,19 @@ namespace UserRegistration
 {
     class Patterns
     {
-        public static void Email(string name)
+        public static void MobileNumber(string name)
         {
-            string Email = "^[A-Z0-9a-z]{1,}([.#$^][A-Za-z0-9]+)*[@][A-Za-z]{2,}[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$";
-            Regex regex = new Regex(Email);
+            string MobileNumber = "(0|91)?[ ][6-9][0-9]{9}";
+            Regex regex = new Regex(MobileNumber);
             if (regex.IsMatch(name))
             {
-                Console.WriteLine(name + " is valid Email");
+                Console.WriteLine(name + " is valid Mobile Number");
             }
             else
             {
-                Console.WriteLine(name + " is invalid Email.");
-                Console.ReadKey();
+                Console.WriteLine(name + " is invalid Mobile Number.");
+            }
+            Console.ReadKey();
         }
     }
 }
