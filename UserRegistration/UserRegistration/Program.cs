@@ -8,14 +8,13 @@ namespace UserRegistration
 {
     class Program
     {
-         static void Main(string[] args)
+        static void Main(string[] args)
         {
-            
-                Console.WriteLine("Welcome to Regular Expression Program \n");
-                Console.WriteLine("Write your name using 1st character should be Capital ");
-                Console.Write("\n Enter Last Name : ");
-                string name = Console.ReadLine();
-                Patterns.LastName(name);
-            }
+            Console.WriteLine("Welcome to Regular Expression Program \n");
+            Console.WriteLine("Write your Email ex : example123@gmail.com your can write yahoo and any other mail ID.");
+            Console.Write("\n Enter Email : ");
+            string name = Console.ReadLine();
+            Patterns.Email(name);
         }
     }
+}
