@@ -9,19 +9,21 @@ namespace UserRegistration
 {
     class Patterns
     {
-        public static void MobileNumber(string name)
-        {
-            string MobileNumber = "(0|91)?[ ][6-9][0-9]{9}";
-            Regex regex = new Regex(MobileNumber);
-            if (regex.IsMatch(name))
+
+        
+            public static void Password(string name)
             {
-                Console.WriteLine(name + " is valid Mobile Number");
+                string Password = "^[A-Za-z0-9]{8,}";
+                Regex regex = new Regex(Password);
+                if (regex.IsMatch(name))
+                {
+                    Console.WriteLine(name + " is valid Possword");
+                }
+                else
+                {
+                    Console.WriteLine(name + " is invalid possword.");
+                }
+            Console.ReadLine();
             }
-            else
-            {
-                Console.WriteLine(name + " is invalid Mobile Number.");
-            }
-            Console.ReadKey();
         }
     }
-}
